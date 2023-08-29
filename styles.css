@@ -18,13 +18,18 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: lightgrey;
+  background-color: rgba(217, 217, 223, 1);
 }
 
 .content-container {
   width: 50vw;
   height: 100vh;
-  background-color: darkgrey;
+  background: linear-gradient(
+    0deg,
+    rgba(217, 217, 223, 1) 10%,
+    rgba(191, 191, 196, 1) 60%,
+    rgba(134, 139, 140, 1) 100%
+  );
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -49,7 +54,7 @@ body {
 
 #block-m {
   position: relative;
-  width: 80%;
+  width: 50%;
   -webkit-animation: fadeinM 1500ms;
   -moz-animation: fadeinM 1500ms;
   -ms-animation: fadeinM 1500ms;
@@ -109,8 +114,7 @@ body {
 
 #spartan {
   position: relative;
-  width: 57%;
-  margin-top: 1rem;
+  width: 40%;
   -webkit-animation: fadeinS 1500ms;
   -moz-animation: fadeinS 1500ms;
   -ms-animation: fadeinS 1500ms;
