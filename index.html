@@ -1,3 +1,4 @@
+<!-- Created by Jake Hill github:jacob-hill90 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,36 +9,112 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
-      rel="stylesheet"
-    />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&display=swap"
       rel="stylesheet"
     />
     <title>JoeJoes Tailgate</title>
   </head>
   <body>
     <div class="content-container">
+      <div id="overlay">
+        <div onclick="closeOverlay()">X</div>
+      </div>
       <div class="top-section">
         <div class="left-section">
           <img src="/images/blockM.png" id="block-m" />
+          <h4 class="left-team-name">Michigan</h4>
         </div>
         <div class="middle-section">
           <div class="vs-text">VS</div>
+          <div class="date">
+            <h2 class="joejoe-text">JOE JOE'S</h2>
+          </div>
         </div>
         <div class="right-section">
           <img src="/images/spartan.png" id="spartan" />
-        </div>
-        <div class="date">
-          <h2>October 21st TBA</h2>
+          <h4 class="right-team-name">Michigan St</h4>
         </div>
       </div>
       <div class="center-section">
-        <h1>Itinerary Coming Soon</h1>
+        <div class="center-top">
+          <h2 class="tailGatePart-text">TAILGATE PARTY</h2>
+          <p>2855 West Arbor Rd, Ann Arbor, MI 48103</p>
+          <h5 id="gameDay">OCTOBER 21ST TBD</h5>
+        </div>
+        <div class="center-middle">
+          <h3 class="schedule-text">SCHEDULE</h3>
+          <div class="event">
+            <h6>
+              4:30 PM - Start Time&nbsp;
+              <h6 class="schedule-ital">
+                (food is set out & 4 bartenders go live)
+              </h6>
+            </h6>
+          </div>
+          <div class="event">
+            <h6>5:18 PM - Flag Raising in Memory of Molly</h6>
+          </div>
+          <div class="event">
+            <h6>
+              5:25 PM - National Anthem&nbsp;
+              <h6 class="schedule-ital">
+                performed by Abigail, Opera Professional
+              </h6>
+            </h6>
+          </div>
+          <div class="event">
+            <h6>
+              5:35 PM - God Bless America&nbsp;
+              <h6 class="schedule-ital">
+                performed by Abigail, Opera Professional
+              </h6>
+            </h6>
+          </div>
+          <div class="event">
+            <h6>
+              5:45 PM - Bagpipers & Drummers&nbsp;
+              <h6 class="schedule-ital">featuring 9 pipers & 2 drummers</h6>
+            </h6>
+          </div>
+          <div class="event">
+            <h6>6:00 PM - DJ Ross</h6>
+          </div>
+          <div class="event">
+            <h6>
+              7:05 PM - Drone Light Show&nbsp;
+              <h6 class="schedule-ital">presented by Hire UAV Pro</h6>
+            </h6>
+          </div>
+          <div class="event">
+            <h6>7:30 PM - GAME TIME</h6>
+          </div>
+          <div class="event">
+            <h6>
+              9:00 PM - Halftime&nbsp;
+              <h6 class="schedule-ital">featuring DJ & Live Entertainment</h6>
+            </h6>
+          </div>
+          <div class="event">
+            <h6>9:30 PM - GAME SECOND HALF</h6>
+          </div>
+          <div class="event">
+            <h6>
+              11:00 PM - Post Game Power&nbsp;
+              <h6 class="schedule-ital">featuring Pizza & Night Caps</h6>
+            </h6>
+          </div>
+        </div>
       </div>
-      <div class="bottom-section"></div>
+      <div class="bottom-section">
+        <div id="moreInfo-container" onclick="test()">
+          More Information
+          <div id="close-icon" onclick="closeTest()">X</div>
+        </div>
+        <p id="demo"></p>
+      </div>
     </div>
   </body>
   <script src="main.js"></script>
 </html>
+
+<!-- <button onclick="setOverlay()">Set Modal</button> -->
