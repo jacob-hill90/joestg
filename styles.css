@@ -1,5 +1,6 @@
 * {
   margin: 0;
+  border: 0;
   padding: 0;
 }
 
@@ -10,6 +11,16 @@ body {
   justify-content: center;
   align-items: center;
   background-color: rgba(217, 217, 223, 1);
+}
+
+p {
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+a {
+  color: black;
 }
 
 @font-face {
@@ -35,7 +46,7 @@ body {
   background: linear-gradient(
     0deg,
     rgba(217, 217, 223, 1) 10%,
-    rgb(200, 200, 200) 100%
+    rgb(175, 175, 175) 100%
   );
   display: flex;
   flex-direction: column;
@@ -46,7 +57,7 @@ body {
 .top-section {
   position: relative;
   width: 100%;
-  height: 18%;
+  height: 20%;
   display: flex;
 }
 
@@ -197,7 +208,7 @@ body {
 #demo {
   position: absolute;
   font-family: "Montserrat", sans-serif;
-  margin-top: 0.4rem;
+  margin-top: 1.5rem;
   font-size: 0.8em;
   -webkit-animation: fadeinDate 1500ms;
   -moz-animation: fadeinDate 1500ms;
@@ -226,7 +237,7 @@ body {
 
 .center-section {
   width: 100%;
-  height: 72%;
+  height: 75%;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -236,8 +247,8 @@ body {
 
 .center-top {
   position: relative;
+  height: 12%;
   width: 100%;
-  height: 20%;
   opacity: 80%;
   display: flex;
   flex-direction: column;
@@ -260,7 +271,7 @@ body {
 .center-middle {
   position: relative;
   width: 90%;
-  height: 80%;
+  height: 88%;
   text-align: left;
   font-family: "Montserrat", sans-serif;
   display: flex;
@@ -275,15 +286,36 @@ body {
 }
 
 .schedule-text {
-  position: absolute;
-  top: -1.2rem;
   width: 100%;
   text-align: center;
+  text-decoration: underline;
+  font-size: 1.1rem;
+  font-weight: 500;
 }
 
 .event {
   display: flex;
   font-size: 0.8rem;
+}
+
+.time-text {
+  width: 22%;
+  display: flex;
+  justify-content: center;
+  font-weight: 600;
+}
+
+.event-text {
+  width: 80%;
+}
+
+.bold-event-text {
+  font-weight: 600;
+}
+
+.ital-event-text {
+  font-style: italic;
+  font-size: 0.7rem;
 }
 
 .schedule-ital {
@@ -293,23 +325,152 @@ body {
 
 .bottom-section {
   width: 100%;
-  height: 10%;
+  height: 7%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
+  background-color: darkgray;
 }
 
-#moreInfo-container {
+.info-container {
   position: absolute;
   width: 100%;
-  height: 10%;
-  background-color: darkgray;
+  height: 3%;
+  bottom: 4%;
   font-family: "Montserrat", sans-serif;
   text-align: center;
+  background-color: darkgray;
   transition-duration: 1000ms;
 }
 
-#close-icon {
+.more-info-text {
+  display: block;
+  transition-duration: 1000ms;
+  font-weight: 500;
+  font-size: 0.9rem;
+}
+
+.expand-info-container {
+  height: 81%;
+}
+
+.toggle-more-info-text {
   display: none;
+}
+
+.close-icon {
+  position: absolute;
+  margin: 0.4rem;
+  display: none;
+  width: 6%;
+  right: 0;
+  z-index: 1000;
+}
+
+.toggle-close-icon {
+  display: block;
+}
+
+.menu-lodging-container {
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+
+.toggle-menu-lodging-container {
+  display: block;
+}
+
+.menu-container {
+  width: 100%;
+  height: 21%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.menu-header {
+  position: relative;
+  width: 90%;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  text-align: left;
+}
+
+.menu-item-container {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  margin-top: 0.6rem;
+  font-size: 0.95rem;
+}
+
+.menu-col-left {
+  width: 50%;
+  text-align: left;
+}
+
+.menu-col-right {
+  width: 50%;
+  text-align: left;
+}
+
+.lodging-container {
+  width: 100%;
+  height: 78%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.lodging-header {
+  position: relative;
+  width: 90%;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  margin-top: 1.4rem;
+  text-align: left;
+}
+
+@media only screen and (min-width: 600px) {
+  .content-container {
+    max-width: 70vw;
+  }
+
+  .info-container {
+    max-width: 70vw;
+  }
+
+  .center-middle {
+    width: 50%;
+  }
+  .event {
+    font-size: 1.2rem;
+  }
+
+  #block-m {
+    width: 60%;
+  }
+
+  #spartan {
+    width: 36%;
+  }
+
+  .ital-event-text {
+    font-size: 1rem;
+  }
+
+  .close-icon {
+    width: 2%;
+    margin: 0.6rem;
+  }
+
+  .schedule-text {
+    font-size: 1.8rem;
+  }
 }

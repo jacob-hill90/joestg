@@ -1,4 +1,4 @@
-var countDownDate = new Date("Oct 21, 2023").getTime();
+var countDownDate = new Date("Oct 21, 2023 16:30:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -30,15 +30,23 @@ function setOverlay() {
 }
 
 function test() {
-  document.getElementById("moreInfo-container").style.height = "150%";
+  document.getElementById("moreInfo-container").style.height = "66%";
   document.getElementById("close-icon").style.display = "block";
 }
 
 function closeTest() {
   console.log("test");
-  document.getElementById("moreInfo-container").style.height = "200%";
+  document.getElementById("moreInfo-container").style.height = "3%";
 }
 
-function closeOverlay() {
-  document.getElementById("overlay").style.visibility = "hidden";
+function myFunction() {
+  var element = document.getElementById("moreInfo-container");
+  element.classList.toggle("expand-info-container");
+  document
+    .getElementById("info-text")
+    .classList.toggle("toggle-more-info-text");
+  document.getElementById("close-icon").classList.toggle("toggle-close-icon");
+  document
+    .getElementById("menu-lodging-container")
+    .classList.toggle("toggle-menu-lodging-container");
 }
