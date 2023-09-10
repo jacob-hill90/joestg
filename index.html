@@ -1,3 +1,4 @@
+<!-- Created by Jake Hill github:jacob-hill90 -->
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -8,35 +9,160 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400;500;600;800&display=swap"
       rel="stylesheet"
     />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Raleway&display=swap"
-      rel="stylesheet"
-    />
-    <title>JoeJoes Tailgate</title>
+    <title>Joe Joe's Tailgate</title>
   </head>
   <body>
     <div class="content-container">
       <div class="top-section">
         <div class="left-section">
           <img src="/images/blockM.png" id="block-m" />
+          <h4 class="left-team-name">Michigan</h4>
         </div>
         <div class="middle-section">
           <div class="vs-text">VS</div>
+          <div class="date">
+            <h2 class="joejoe-text">JOE JOE'S</h2>
+          </div>
         </div>
         <div class="right-section">
           <img src="/images/spartan.png" id="spartan" />
-        </div>
-        <div class="date">
-          <h2>October 21st TBA</h2>
+          <h4 class="right-team-name">Michigan State</h4>
         </div>
       </div>
       <div class="center-section">
-        <h1>Itinerary Coming Soon</h1>
+        <div class="center-top">
+          <h2 class="tailGatePart-text">TAILGATE PARTY</h2>
+          <p>2855 West Arbor Rd, Ann Arbor, MI 48103</p>
+          <h5 id="gameDay">OCTOBER 21ST 7:30PM</h5>
+        </div>
+        <div class="center-middle">
+          <div class="schedule-text">SCHEDULE</div>
+          <div class="event">
+            <div class="time-text">4:30 PM -</div>
+            <div class="event-text">
+              <div class="bold-event-text">&nbsp;Start Time</div>
+              <div class="ital-event-text">
+                (food is set out & 4 bartenders go live)
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="time-text">5:18 PM -</div>
+            <div class="event-text">
+              <div class="bold-event-text">
+                &nbsp;Flag Raising in Memory of Molly
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="time-text">5:25 PM -</div>
+            <div class="event-text">
+              <div class="bold-event-text">&nbsp;National Anthem</div>
+              <div class="ital-event-text">
+                performed by Abigail, Opera Professional
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="time-text">5:35 PM -</div>
+            <div class="event-text">
+              <div class="bold-event-text">&nbsp;God Bless America</div>
+              <div class="ital-event-text">
+                performed by Abigail, Opera Professional
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="time-text">5:45 PM -</div>
+            <div class="event-text">
+              <div class="bold-event-text">&nbsp;Bagpipers & Drummers</div>
+              <div class="ital-event-text">featuring 9 pipers & 2 drummers</div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="time-text">6:00 PM -</div>
+            <div class="event-text">
+              <div class="bold-event-text">&nbsp;DJ Ross</div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="time-text">7:05 PM -</div>
+            <div class="event-text">
+              <div class="bold-event-text">&nbsp;Drone Light Show</div>
+              <div class="ital-event-text">
+                presented by
+                <a href="https://www.hireuavpro.com/" target="_blank"
+                  >Hire UAV Pro</a
+                >
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="time-text">7:30 PM -</div>
+            <div class="event-text">
+              <div class="bold-event-text">&nbsp;GAME TIME</div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="time-text">9:00 PM -</div>
+            <div class="event-text">
+              <div class="bold-event-text">&nbsp;Halftime</div>
+              <div class="ital-event-text">
+                featuring DJ & Live Entertainment
+              </div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="time-text">9:30 PM -</div>
+            <div class="event-text">
+              <div class="bold-event-text">&nbsp;GAME SECOND HALF</div>
+            </div>
+          </div>
+          <div class="event">
+            <div class="time-text">11:00 PM -</div>
+            <div class="event-text">
+              <div class="bold-event-text">&nbsp;Post Game Power</div>
+              <div class="ital-event-text">featuring Pizza & Night Caps</div>
+            </div>
+          </div>
+        </div>
       </div>
-      <div class="bottom-section"></div>
+      <div class="bottom-section" onclick="myFunction()">
+        <div id="moreInfo-container" class="info-container">
+          <div class="more-info-text" id="info-text">
+            Click For More Information
+          </div>
+          <div>
+            <img src="/images/close.png" class="close-icon" id="close-icon" />
+          </div>
+          <div class="menu-lodging-container" id="menu-lodging-container">
+            <div class="menu-container">
+              <div class="menu-header">MENU</div>
+              <div class="menu-item-container">
+                <div class="menu-col-left">
+                  <div class="menu-item">Burritos</div>
+                  <div class="menu-item">Pulled Pork</div>
+                  <div class="menu-item">Angus Burgers</div>
+                  <div class="menu-item">Hot Dogs</div>
+                </div>
+                <div class="menu-col-right">
+                  <div class="menu-item">Chicken Fingers</div>
+                  <div class="menu-item">Cheese & Veggie Trays</div>
+                  <div class="menu-item">Robust Cookies</div>
+                  <div class="menu-item">Coffee Bar</div>
+                </div>
+              </div>
+            </div>
+            <div class="lodging-container">
+              <div class="lodging-header">Lodging + Transportation</div>
+            </div>
+          </div>
+        </div>
+        <p id="demo"></p>
+      </div>
     </div>
   </body>
   <script src="main.js"></script>
