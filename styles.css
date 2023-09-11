@@ -349,6 +349,7 @@ a {
   transition-duration: 1000ms;
   font-weight: 500;
   font-size: 0.9rem;
+  cursor: pointer;
 }
 
 .expand-info-container {
@@ -366,6 +367,7 @@ a {
   width: 6%;
   right: 0;
   z-index: 1000;
+  cursor: pointer;
 }
 
 .toggle-close-icon {
@@ -439,18 +441,18 @@ a {
 
 @media only screen and (min-width: 600px) {
   .content-container {
-    max-width: 70vw;
+    max-width: 50vw;
   }
 
   .info-container {
-    max-width: 70vw;
+    max-width: 50vw;
   }
 
   .center-middle {
-    width: 50%;
+    width: 70%;
   }
   .event {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   #block-m {
@@ -462,7 +464,7 @@ a {
   }
 
   .ital-event-text {
-    font-size: 1rem;
+    font-size: .8rem;
   }
 
   .close-icon {
@@ -471,6 +473,6 @@ a {
   }
 
   .schedule-text {
-    font-size: 1.8rem;
+    font-size: 1.4rem;
   }
 }
