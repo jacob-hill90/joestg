@@ -74,6 +74,7 @@ a {
 
 #block-m {
   position: relative;
+  cursor: pointer;
   width: 65%;
   -webkit-animation: fadeinM 1500ms;
   -moz-animation: fadeinM 1500ms;
@@ -81,11 +82,6 @@ a {
   -o-animation: fadeinM 1500ms;
   animation: fadeinM 1500ms;
   animation-timing-function: cubic-bezier(0.17, 0.67, 0.65, 1.3);
-}
-
-.team-logo {
-  display: flex;
-  justify-content: center;
 }
 
 @keyframes fadeinM {
@@ -158,6 +154,7 @@ a {
 
 #spartan {
   position: relative;
+  cursor: pointer;
   width: 50%;
   -webkit-animation: fadeinS 1500ms;
   -moz-animation: fadeinS 1500ms;

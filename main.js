@@ -34,6 +34,18 @@ function test() {
   document.getElementById("close-icon").style.display = "block";
 }
 
+function michiganLogoClick() {
+  window
+    .open("http://www.google.com/search?q=Michigan+Football", "_blank")
+    .focus();
+}
+
+function michiganStateLogoClick() {
+  window
+    .open("http://www.google.com/search?q=Michigan+State+Football", "_blank")
+    .focus();
+}
+
 function closeTest() {
   console.log("test");
   document.getElementById("moreInfo-container").style.height = "3%";
