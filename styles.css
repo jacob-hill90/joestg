@@ -487,7 +487,7 @@ a {
   }
 
   .center-middle {
-    width: 45%;
+    width: 55%;
   }
   .event {
     font-size: 1rem;
@@ -533,7 +533,8 @@ a {
   }
 
   .schedule-text {
-    font-size: 1.4rem;
+    margin-top: 2rem;
+    font-size: 1.2rem;
   }
 }
 
