@@ -10,7 +10,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(217, 217, 223, 1);
+  background-color: whitesmoke;
 }
 
 p {
@@ -466,12 +466,28 @@ a {
     max-width: 50vw;
   }
 
+  .joejoe-text {
+    font-size: 2rem;
+  }
+
+  .addy {
+    font-size: 1rem;
+  }
+
+  .tailGatePart-text {
+    font-size: 2rem;
+  }
+
+  #gameDay {
+    font-size: 1rem;
+  }
+
   .info-container {
     max-width: 50vw;
   }
 
   .center-middle {
-    width: 70%;
+    width: 45%;
   }
   .event {
     font-size: 1rem;
@@ -483,6 +499,28 @@ a {
 
   #spartan {
     width: 36%;
+  }
+
+  .vs-text {
+    font-family: "Montserrat", sans-serif;
+    -webkit-animation: fadeinVS 1500ms;
+    -moz-animation: fadeinVS 1500ms;
+    -ms-animation: fadeinVS 1500ms;
+    -o-animation: fadeinVS 1500ms;
+    animation: fadeinVS 1500ms;
+    font-size: 3rem;
+    font-weight: 500;
+    opacity: 85%;
+    animation-timing-function: cubic-bezier(0.17, 0.67, 0.65, 1.3);
+  }
+
+  @keyframes fadeinVS {
+    from {
+      font-size: 0rem;
+    }
+    to {
+      font-size: 3rem;
+    }
   }
 
   .ital-event-text {
