@@ -16,24 +16,23 @@
   </head>
   <body>
     <div class="content-container">
+      <div class="landscape-overlay">
+        For best viewing experience, switch to portrait mode
+      </div>
       <div class="top-section">
         <div class="left-section">
           <img src="/images/blockM.png" id="block-m" />
-          <h4 class="left-team-name">Michigan</h4>
         </div>
         <div class="middle-section">
           <div class="vs-text">VS</div>
-          <div class="date">
-            <h2 class="joejoe-text">JOE JOE'S</h2>
-          </div>
         </div>
         <div class="right-section">
           <img src="/images/spartan.png" id="spartan" />
-          <h4 class="right-team-name">Michigan State</h4>
         </div>
       </div>
       <div class="center-section">
         <div class="center-top">
+          <h2 class="joejoe-text">JOE JOE'S</h2>
           <h2 class="tailGatePart-text">TAILGATE PARTY</h2>
           <p>2855 West Arbor Rd, Ann Arbor, MI 48103</p>
           <h5 id="gameDay">OCTOBER 21ST 7:30PM</h5>
@@ -130,13 +129,18 @@
           </div>
         </div>
       </div>
-      <div class="bottom-section" onclick="myFunction()">
+      <div class="bottom-section">
         <div id="moreInfo-container" class="info-container">
-          <div class="more-info-text" id="info-text">
+          <div class="more-info-text" id="info-text" onclick="myFunction()">
             Click For More Information
           </div>
           <div>
-            <img src="/images/close.png" class="close-icon" id="close-icon" />
+            <img
+              src="/images/close.png"
+              class="close-icon"
+              id="close-icon"
+              onclick="myFunction()"
+            />
           </div>
           <div class="menu-lodging-container" id="menu-lodging-container">
             <div class="menu-container">
@@ -158,6 +162,27 @@
             </div>
             <div class="lodging-container">
               <div class="lodging-header">Lodging + Transportation</div>
+              <div class="lodging-item-container">
+                <div class="lodging-item hotel">Staybridge Suites</div>
+                <div class="lodging-item">
+                  3850 Research Park Drive Ann Arbor, MI
+                </div>
+                <div class="lodging-item">Phone: 734-213-1400</div>
+                <div class="lodging-item">Email: a2sales.stybrg@gmail.com</div>
+                <div class="lodging-item">
+                  Link:
+                  <a
+                    href="https://www.ihg.com/staybridge/hotels/us/en/ann-arbor/arbsb/hoteldetail?fromRedirect=true&qSrt=sBR&qIta=99801505&icdv=99801505&qSlH=ARBSB&qGrpCd=FOR&setPMCookies=true&qSHBrC=SB&qDest=3850%20Research%20Park%20Drive%2C%20Ann%20Arbor%2C%20MI%2C%20US&srb_u=1"
+                    >Joe Joe's Block</a
+                  >
+                </div>
+                <div class="lodging-item shuttle discount">
+                  Book by Oct. 2nd to recieve discounted block rate
+                </div>
+                <div class="lodging-item shuttle">
+                  Free Shuttle runs to the tailgate and back to hotel
+                </div>
+              </div>
             </div>
           </div>
         </div>

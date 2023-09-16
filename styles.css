@@ -45,7 +45,7 @@ a {
   height: 100%;
   background: linear-gradient(
     0deg,
-    rgba(217, 217, 223, 1) 10%,
+    rgba(240, 240, 240, 1) 10%,
     rgb(175, 175, 175) 100%
   );
   display: flex;
@@ -74,7 +74,7 @@ a {
 
 #block-m {
   position: relative;
-  width: 72%;
+  width: 65%;
   -webkit-animation: fadeinM 1500ms;
   -moz-animation: fadeinM 1500ms;
   -ms-animation: fadeinM 1500ms;
@@ -104,7 +104,7 @@ a {
   animation-timing-function: cubic-bezier(1, 0, 1, -0.01);
   opacity: 1;
   font-family: "Montserrat", sans-serif;
-  font-size: small;
+  font-size: 0.65rem;
   font-weight: 500;
 }
 
@@ -120,13 +120,14 @@ a {
 }
 
 .vs-text {
-  font-family: university;
+  font-family: "Montserrat", sans-serif;
   -webkit-animation: fadeinVS 1500ms;
   -moz-animation: fadeinVS 1500ms;
   -ms-animation: fadeinVS 1500ms;
   -o-animation: fadeinVS 1500ms;
   animation: fadeinVS 1500ms;
-  font-size: 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
   opacity: 85%;
   animation-timing-function: cubic-bezier(0.17, 0.67, 0.65, 1.3);
 }
@@ -136,7 +137,7 @@ a {
     font-size: 0rem;
   }
   to {
-    font-size: 1.6rem;
+    font-size: 1rem;
   }
 }
 
@@ -182,27 +183,13 @@ a {
   animation-timing-function: cubic-bezier(1, 0, 1, -0.01);
   opacity: 1;
   font-family: "Montserrat", sans-serif;
-  font-size: small;
+  font-size: 0.65rem;
   font-weight: 500;
 }
 
-.date {
-  position: absolute;
-  width: 20rem;
-  bottom: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-size: 0.8rem;
-  opacity: 0.8;
+.joejoe-text {
   font-family: university;
-  -webkit-animation: fadeinDate 1500ms;
-  -moz-animation: fadeinDate 1500ms;
-  -ms-animation: fadeinDate 1500ms;
-  -o-animation: fadeinDate 1500ms;
-  animation: fadeinDate 1500ms;
-  animation-timing-function: cubic-bezier(1, 0, 1, -0.01);
+  font-size: 1rem;
 }
 
 #demo {
@@ -248,6 +235,7 @@ a {
 .center-top {
   position: relative;
   height: 12%;
+  top: -2.5rem;
   width: 100%;
   opacity: 80%;
   display: flex;
@@ -264,12 +252,13 @@ a {
 
 .tailGatePart-text {
   font-family: university;
-  font-size: 1rem;
+  font-size: 0.9rem;
   margin-bottom: 0.2rem;
 }
 
 .center-middle {
   position: relative;
+  top: -1rem;
   width: 90%;
   height: 88%;
   text-align: left;
@@ -288,6 +277,7 @@ a {
 .schedule-text {
   width: 100%;
   text-align: center;
+  margin-top: 0.8rem;
   text-decoration: underline;
   font-size: 1.1rem;
   font-weight: 500;
@@ -330,17 +320,23 @@ a {
   flex-direction: column;
   justify-content: start;
   align-items: center;
-  background-color: darkgray;
+  background-color: white;
+  -webkit-animation: fadeinDate 1500ms;
+  -moz-animation: fadeinDate 1500ms;
+  -ms-animation: fadeinDate 1500ms;
+  -o-animation: fadeinDate 1500ms;
+  animation: fadeinDate 1500ms;
+  animation-timing-function: cubic-bezier(1, 0, 1, -0.01);
 }
 
 .info-container {
   position: absolute;
+  background-color: white;
   width: 100%;
   height: 3%;
   bottom: 4%;
   font-family: "Montserrat", sans-serif;
   text-align: center;
-  background-color: darkgray;
   transition-duration: 1000ms;
 }
 
@@ -353,7 +349,7 @@ a {
 }
 
 .expand-info-container {
-  height: 81%;
+  height: 85%;
 }
 
 .toggle-more-info-text {
@@ -362,7 +358,7 @@ a {
 
 .close-icon {
   position: absolute;
-  margin: 0.4rem;
+  margin: 0.8rem;
   display: none;
   width: 6%;
   right: 0;
@@ -396,6 +392,7 @@ a {
 .menu-header {
   position: relative;
   width: 90%;
+  margin-top: 0.8rem;
   font-weight: 600;
   font-size: 1.2rem;
   text-decoration: underline;
@@ -439,6 +436,31 @@ a {
   text-align: left;
 }
 
+.lodging-item-container {
+  width: 90%;
+  margin-top: 1rem;
+  text-align: left;
+  z-index: 2000;
+}
+
+.lodging-item {
+  margin-bottom: 0.2rem;
+  text-decoration: none;
+}
+
+.hotel {
+  font-weight: 600;
+}
+
+.discount {
+  margin-top: 1rem;
+}
+
+.shuttle {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
 @media only screen and (min-width: 600px) {
   .content-container {
     max-width: 50vw;
@@ -464,7 +486,7 @@ a {
   }
 
   .ital-event-text {
-    font-size: .8rem;
+    font-size: 0.8rem;
   }
 
   .close-icon {
@@ -474,5 +496,39 @@ a {
 
   .schedule-text {
     font-size: 1.4rem;
+  }
+}
+
+.landscape-overlay {
+  position: absolute;
+  background-color: darkgrey;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: none;
+}
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+  .landscape-overlay {
+    display: flex;
+  }
+
+  .top-section {
+    display: none;
+  }
+
+  .center-section {
+    display: none;
+  }
+
+  .bottom-section {
+    display: none;
   }
 }
