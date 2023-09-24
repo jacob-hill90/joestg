@@ -58,6 +58,8 @@ function myFunction() {
     .getElementById("info-text")
     .classList.toggle("toggle-more-info-text");
   document.getElementById("close-icon").classList.toggle("toggle-close-icon");
+  document.getElementById("right-arrow").classList.toggle("toggle-right-arrow");
+  document.getElementById("left-arrow").classList.toggle("toggle-left-arrow");
   document
     .getElementById("menu-lodging-container")
     .classList.toggle("toggle-menu-lodging-container");
