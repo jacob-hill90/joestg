@@ -43,11 +43,7 @@ a {
 .content-container {
   width: 100vw;
   height: 100%;
-  background: linear-gradient(
-    0deg,
-    rgba(240, 240, 240, 1) 10%,
-    rgb(195, 195, 195) 100%
-  );
+  background: white;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -351,7 +347,7 @@ a {
 }
 
 .expand-info-container {
-  height: 85%;
+  height: 82%;
 }
 
 .toggle-more-info-text {
