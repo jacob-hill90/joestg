@@ -256,13 +256,14 @@ a {
 
 .center-middle {
   position: relative;
+  top: -1rem;
   width: 90%;
   height: 88%;
   text-align: left;
   font-family: "Montserrat", sans-serif;
   display: flex;
   flex-direction: column;
-  justify-content: start;
+  justify-content: space-evenly;
   -webkit-animation: fadeinDate 1500ms;
   -moz-animation: fadeinDate 1500ms;
   -ms-animation: fadeinDate 1500ms;
@@ -275,14 +276,12 @@ a {
   width: 100%;
   text-align: center;
   margin-top: 0.8rem;
-  margin-bottom: 1rem;
   text-decoration: underline;
   font-size: 1.1rem;
   font-weight: 500;
 }
 
 .event {
-  margin-bottom: 0.8rem;
   display: flex;
   font-size: 0.8rem;
 }
@@ -370,7 +369,7 @@ a {
 }
 
 .expand-info-container {
-  height: 96%;
+  height: 82%;
 }
 
 .toggle-more-info-text {
@@ -564,9 +563,8 @@ a {
   }
 
   .schedule-text {
-    margin-top: 3rem;
+    margin-top: 3.8rem;
     font-size: 1.2rem;
-    margin-bottom: 1rem;
   }
 }
 
@@ -642,9 +640,8 @@ a {
   }
 
   .schedule-text {
-    margin-top: 2rem;
+    margin-top: 3.8rem;
     font-size: 1.2rem;
-    margin-bottom: 1rem;
   }
 }
 
