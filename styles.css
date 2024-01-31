@@ -68,3 +68,23 @@ body {
 
 /* @media only screen and (min-width: 400px) {
 } */
+
+#website-container {
+  height: 100dvh;
+  width: 60dvh;
+}
+
+#top-section {
+  height: 20dvh;
+  background-color: red;
+}
+
+#middle-section {
+  height: 70dvh;
+  background-color: green;
+}
+
+#bottom-section {
+  height: 10dvh;
+  background-color: blue;
+}
