@@ -6,103 +6,186 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="styles.css" />
     <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Mukta&display=swap"
+      rel="stylesheet"
+    />
     <title>Joe Joe's Tailgate | 2024</title>
   </head>
   <body>
+    <div class="landscape-overlay">
+      View in portrait orientation for best experience
+    </div>
+    <div class="loader-wrapper">
+      <div class="line-create"></div>
+    </div>
     <div id="website-container">
       <div id="top-section">
-        <img src="./images/blockM.png" id="blockM" />
-        <img src="./images/joejoelogo.png" id="joejoelogo" />
-        <img src="./images/spartan.png" id="spartan" />
+        <div id="logos">
+          <img
+            src="./images/blockM.png"
+            id="blockM"
+            onclick="michiganLogoClick()"
+          />
+          <img
+            src="./images/spartan.png"
+            id="spartan"
+            onclick="michiganStateLogoClick()"
+          />
+        </div>
+        <img
+          src="./images/joejoelogo.png"
+          id="joejoelogo"
+          onclick="reloadPage()"
+        />
         <div id="address">2855 West Arbor Rd, Ann Arbor, MI 48103</div>
         <div id="date">October 26th, 2024</div>
       </div>
       <div id="middle-section">
-        <div class="time-event">
-          <div class="event-text"><strong>4:30 PM -</strong> Start Time</div>
-          <div class="italic-section">food is set out & 4 bartenders go live</div>
-        </div>
-        <div class="time-event">
-          <div class="event-text"><strong>5:00 PM -</strong> DJ & MC - Ross & Johnny B</div>
-          <!-- No italic section for this event -->
-        </div>
-        <div class="time-event">
-          <div class="event-text"><strong>5:18 PM -</strong> DJ & MC - Ross & Johnny B</div>
-          <!-- No italic section for this event -->
-        </div>
-        <div class="time-event">
-          <div class="event-text"><strong>5:25 PM -</strong> National Anthem</div>
-          <div class="italic-section">performed by Abigail, Opera Professional</div>
-        </div>
-        <div class="time-event">
-          <div class="event-text"><strong>5:35 PM -</strong> T-Shirt Air Cannons</div>
-          <!-- No italic section for this event -->
-        </div>
-        <div class="time-event">
-          <div class="event-text"><strong>6:00 PM -</strong> Bagpipers & Drummers</div>
-          <div class="italic-section">feat. 15 pipers & 5 drummers</div>
-        </div>
-        <div class="time-event">
-          <div class="event-text"><strong>6:30 PM -</strong> Snap-on Raffle</div>
-          <!-- No italic section for this event -->
-        </div>
-        <div class="time-event">
-          <div class="event-text"><strong>7:05 PM -</strong> 25,000 bulb Light Show</div>
-          <!-- No italic section for this event -->
-        </div>
-        <div class="time-event">
-          <div class="event-text"><strong>7:30 PM -</strong> Game Time</div>
-          <!-- No italic section for this event -->
-        </div>
-        <div class="time-event">
-          <div class="event-text"><strong>8:15 PM -</strong> God Bless America</div>
-          <div class="italic-section">performed by Abigail, Opera Professional</div>
-        </div>     
-        <div class="time-event">
-          <div class="event-text"><strong>9:00 PM -</strong> Half Time</div>
-          <!-- No italic section for this event -->
-        </div>
-        <div class="time-event">
-          <div class="event-text"><strong>9:30 PM -</strong> Second Half</div>
-          <!-- No italic section for this event -->
-        </div>
-        <div class="time-event">
-          <div class="event-text"><strong>11:00 PM -</strong> Post Game Power Up</div>
-          <div class="italic-section">feat. Pizza and Night Caps</div>
-        </div>
-
-
-        <!-- Add more time-event blocks as needed -->
-      </div>
-      <div id="bottom-section">
-        <section class="timeContainer">
-          <div class="wrapper">
-            <div class="days">
-              <h2 id="days">DD</h2>
-              DAYS
-            </div>
-            <div class="hours">
-              <h2 id="hours">HH</h2>
-              HOURS
-            </div>
-            <div class="minutes">
-              <h2 id="minutes">MM</h2>
-              MIN
-            </div>
-            <div class="seconds">
-              <h2 id="seconds">SS</h2>
-              SEC
+        <div id="list-of-events">LIST OF EVENTS</div>
+        <div id="event-container">
+          <div class="time-event">
+            <div class="event-text">4:30 PM - Start Time</div>
+            <div class="italic-section">
+              food is set out & 4 bartenders go live
             </div>
           </div>
-        </section>
+          <div class="time-event">
+            <div class="event-text">5:00 PM - DJ & MC - Ross & Johnny B</div>
+            <div class="italic-section">&nbsp</div>
+          </div>
+          <div class="time-event">
+            <div class="event-text">
+              5:18 PM - Flag Raising in Memory of Molly
+            </div>
+            <div class="italic-section">&nbsp</div>
+          </div>
+          <div class="time-event">
+            <div class="event-text">5:25 PM - National Anthem</div>
+            <div class="italic-section">
+              performed by Abigail, Opera Professional
+            </div>
+          </div>
+          <div class="time-event">
+            <div class="event-text">5:35 PM - T-Shirt Air Cannons</div>
+            <div class="italic-section">&nbsp</div>
+          </div>
+          <div class="time-event">
+            <div class="event-text">6:00 PM - Bagpipers & Drummers</div>
+            <div class="italic-section">feat. 15 pipers & 5 drummers</div>
+          </div>
+          <div class="time-event">
+            <div class="event-text">6:30 PM - Snap-on Raffle</div>
+            <div class="italic-section">&nbsp</div>
+          </div>
+          <div class="time-event">
+            <div class="event-text">7:05 PM - 25,000 bulb Light Show</div>
+            <div class="italic-section">&nbsp</div>
+          </div>
+          <div class="time-event">
+            <div class="event-text">7:30 PM - Game Time</div>
+            <div class="italic-section">&nbsp</div>
+          </div>
+          <div class="time-event">
+            <div class="event-text">8:15 PM - God Bless America</div>
+            <div class="italic-section">
+              performed by Abigail, Opera Professional
+            </div>
+          </div>
+          <div class="time-event">
+            <div class="event-text">9:00 PM - Half Time</div>
+            <div class="italic-section">&nbsp</div>
+          </div>
+          <div class="time-event">
+            <div class="event-text">9:30 PM - Second Half</div>
+            <div class="italic-section">&nbsp</div>
+          </div>
+          <div class="time-event">
+            <div class="event-text">11:00 PM - Post Game Power Up</div>
+            <div class="italic-section">feat. Pizza and Night Caps</div>
+          </div>
+        </div>
+      </div>
+      <div id="bottom-section">
+        <div id="information-container" class="information-container">
+          <div class="close-info" id="close-info">
+            <img id="close-icon" src="./images/close.svg" />
+          </div>
+          <div class="menu-lodging-container" id="menu-lodging-container">
+            <div class="lodging-container">
+              <div class="lodging-header">Lodging + Transportation</div>
+              <div class="lodging-item-container">
+                <div class="lodging-item hotel">Staybridge Suites</div>
+                <div class="lodging-item">
+                  3850 Research Park Drive Ann Arbor, MI
+                </div>
+                <div class="lodging-item">Phone: 734-213-1400</div>
+                <div class="lodging-item">Email: a2sales.stybrg@gmail.com</div>
+                <div class="lodging-item">
+                  Link:
+                  <a
+                    href="https://www.ihg.com/staybridge/hotels/us/en/ann-arbor/arbsb/hoteldetail?fromRedirect=true&qSrt=sBR&qIta=99801505&icdv=99801505&qSlH=ARBSB&qGrpCd=FOR&setPMCookies=true&qSHBrC=SB&qDest=3850%20Research%20Park%20Drive%2C%20Ann%20Arbor%2C%20MI%2C%20US&srb_u=1"
+                    >J. Fournier Block</a
+                  >
+                </div>
+                <div class="lodging-item shuttle discount">
+                  In order to book online, guests should click the link above.
+                  It will take them to our hotel site, and then they will enter
+                  the dates they would like to stay, click "BOOK NOW" and be
+                  taken to your discounted rates and rooms available. If you
+                  prefer to book directly over the phone, you will need to give
+                  the booking agent this code: FOR
+                </div>
+                <div class="lodging-item shuttle discount">
+                  Book by Oct. 2nd to recieve discounted block rate
+                </div>
+                <div class="lodging-item shuttle discount">
+                  Free Shuttle runs to the tailgate and back to hotel
+                </div>
+              </div>
+            </div>
+            <div class="menu-container">
+              <div class="menu-header">Food + Drink</div>
+              <div class="menu-item-container">
+                <div class="menu-col-left">
+                  <div class="menu-item">Burritos</div>
+                  <div class="menu-item">Pulled Pork</div>
+                  <div class="menu-item">Angus Burgers</div>
+                  <div class="menu-item">Hot Dogs</div>
+                </div>
+                <div class="menu-col-right">
+                  <div class="menu-item">Chicken Fingers</div>
+                  <div class="menu-item">Cheese & Veggie Trays</div>
+                  <div class="menu-item">Robust Cookies</div>
+                  <div class="menu-item">Coffee Bar</div>
+                </div>
+              </div>
+            </div>
+            <div class="kids-container">
+              <div class="menu-header">Kids Park</div>
+              <div class="menu-item-container">
+                <div class="menu-col-left">
+                  <div class="menu-item">Face Painting</div>
+                  <div class="menu-item">Photo Booth</div>
+                  <div class="menu-item">Bounce House</div>
+                  <div class="menu-item">QB Toss</div>
+                </div>
+                <div class="menu-col-right">
+                  <div class="menu-item">Skee-Ball</div>
+                  <div class="menu-item">Connect 4</div>
+                  <div class="menu-item">Jenga</div>
+                  <div class="menu-item">Prizes!</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info-text" id="info-text">Click for More Information</div>
+        </div>
+        <p id="demo"></p>
       </div>
     </div>
   </body>
   <script src="main.js"></script>
 </html>
-
-<!-- <div class="loader-wrapper">
-      <div class="line-down"></div>
-      <div class="open-content"></div>
-      <div class="open-content-again"></div>
-    </div> -->

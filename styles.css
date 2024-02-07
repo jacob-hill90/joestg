@@ -12,88 +12,82 @@ body {
   background-color: whitesmoke;
 }
 
-.loader-wrapper {
-  height: 100dvh;
-  display: flex;
-  justify-content: center;
-}
-
-.line-down {
-  width: 5px;
-  background-color: black;
-  height: 0px;
-  animation: 800ms cubic-bezier(0.54, -0.01, 0.36, 0.57) 200ms slidedown;
-}
-
+/* START LOADING ANIMATION CSS */
 @keyframes slidedown {
   0% {
     height: 0px;
   }
-  100% {
+  50% {
     height: 100dvh;
   }
+
+  100% {
+    height: 0px;
+    bottom: 0px;
+  }
 }
 
-.open-content {
+.loader-wrapper {
   position: absolute;
   height: 100dvh;
-  background-color: black;
-  animation: 1000ms cubic-bezier(0.54, -0.01, 0.36, 0.57) 1000ms openup;
+  display: flex;
+  justify-content: center;
 }
 
-@keyframes openup {
-  0% {
-    width: 5px;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-.open-content-again {
+.line-create {
   position: absolute;
-  height: 100dvh;
-  background-color: black;
-  animation: 1000ms cubic-bezier(0.54, -0.01, 0.36, 0.57) 2000ms closeup;
+  width: 3px;
+  background-color: rgb(100, 100, 100);
+  animation: 500ms cubic-bezier(0.54, -0.01, 0.36, 0.57) slidedown;
 }
 
-@keyframes closeup {
-  0% {
-    width: 100%;
+/* END LOADING ANIMATION CSS */
+
+/* START TOP, MIDDLE, BOTTOM SECTIONS */
+@keyframes fadeinContent {
+  from {
+    opacity: 0;
   }
-  100% {
-    width: 5px;
+  to {
+    opacity: 1;
   }
 }
-
-/* @media only screen and (min-width: 400px) {
-} */
 
 #website-container {
-  height: 100dvh;
-  width: 60dvh;
+  height: 100%;
+  animation: fadeinContent 1000ms;
+  animation-timing-function: cubic-bezier(1, 0, 0.69, 0.69);
 }
 
 #top-section {
-  height: 20dvh;
+  /* background-color: red; */
+  height: 18dvh;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
+  justify-content: space-around;
   align-items: center;
 }
 
 #middle-section {
-  height: 70dvh;
+  /* background-color: green; */
+  height: 75dvh;
   display: flex;
   flex-direction: column;
-  justify-content: center;
 }
 
 #bottom-section {
-  height: 10dvh;
+  /* background-color: blue; */
+  position: relative;
+  height: 7dvh;
+  font-size: 0.8rem;
 }
 
+/* END TOP, MIDDLE, BOTTOM SECTIONS */
+
+/* START TOP SECTION */
+
 #joejoelogo {
+  margin-top: 5px;
   width: 50%;
 }
 
@@ -101,7 +95,7 @@ body {
   position: absolute;
   width: 20%;
   left: 1rem;
-  top: 1.2rem;
+  top: 1.4rem;
 }
 
 #spartan {
@@ -112,110 +106,268 @@ body {
 }
 
 #address {
+  font-size: 0.9rem;
   font-weight: 600;
 }
 
 #date {
+  font-size: 0.9rem;
   font-weight: 900;
-  font-size: 1.2rem;
 }
 
-.schedule {
+/* END TOP SECTION */
+
+/* START MIDDLE SECTION */
+
+#list-of-events {
+  text-align: center;
+  font-size: 0.75rem;
+  font-style: italic;
+  text-decoration: underline;
+  margin-top: 5px;
+}
+
+#event-container {
   width: 100%;
-  max-width: 600px; /* Adjust the max-width as needed */
-  margin: 0 auto;
-  padding: 20px;
-  box-sizing: border-box;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  font-size: clamp(1rem, 2.5vw, 2rem);
+  justify-content: space-between;
 }
-
 .time-event {
   white-space: nowrap;
   overflow: hidden;
+  width: fit-content;
   text-overflow: ellipsis;
-  margin-left: 1rem;
-  margin-bottom: 10px;
+  margin-left: 1.4rem;
 }
 
 .event-text {
   display: inline-block;
   width: calc(100% - 1rem);
+  height: fit-content;
+  font-size: 0.95rem;
 }
 
 .italic-section {
   font-style: italic;
   margin-left: 4.5rem;
+  font-size: 0.8rem;
+  opacity: 0.7;
+}
+/* END MIDDLE SECTION */
+
+/* START BOTTOM SECTION */
+
+.information-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  bottom: 0;
+  text-align: center;
+  transition-duration: 800ms;
+  background-color: lightgray;
 }
 
-.timeContainer {
-  z-index: 2;
+.information-container-expanded {
+  height: 100dvh;
+}
+
+.close-info {
+  position: absolute;
+  padding: 0.4rem;
+  width: 2rem;
+  right: 0;
+  display: none;
+}
+
+.close-info-displayed {
+  display: block;
+}
+
+#close-icon {
+  width: 100%;
+}
+
+.info-text {
+  width: 100%;
+  position: absolute;
+  bottom: 0.5rem;
+  display: block;
+}
+
+.info-text-hidden {
+  display: none;
+}
+
+.menu-lodging-container {
+  width: 100%;
   height: 100%;
+  display: none;
+}
+
+.menu-lodging-container-displayed {
+  display: block;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: start;
+}
+
+.menu-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
   align-items: center;
 }
 
-.timeContainer .wrapper {
-  /* padding: 20px; */
-  display: flex;
-  justify-content: space-around;
-  gap: 20px;
-}
-
-.timeContainer .wrapper div {
-  color: #ccc;
-  text-align: center;
-  width: 24%;
-  /* height: 130px; */
-  border-radius: 12px;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
-}
-
-.timeContainer .wrapper div:first-child {
-  background: #00274c;
-  color: white;
-}
-
-.timeContainer .wrapper div:nth-child(2) {
-  background: #00274c;
-  color: white;
-}
-
-.timeContainer .wrapper div:nth-child(3) {
-  background: #ffcb05;
-  color: #fff;
-}
-
-.timeContainer .wrapper div:last-child {
-  background: #ffcb05;
-  color: #fff;
-}
-
-.timeContainer .wrapper div h2 {
-  font-size: 4.4rem;
-}
-
-.timeContainer .wrapper {
+.kids-container {
   width: 100%;
-  font-size: 1.1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
 }
 
-.timeContainer .wrapper div {
-  /* height: 90px; */
-  padding: 1rem;
+.menu-header {
+  position: relative;
+  width: 90%;
+  margin-top: 0.8rem;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  text-align: left;
 }
 
-#days {
-  font-size: 1rem;
+.menu-item-container {
+  width: 90%;
+  height: 100%;
+  display: flex;
+  font-size: 0.85rem;
 }
 
-#hours {
-  font-size: 1rem;
+.menu-col-left {
+  width: 50%;
+  text-align: left;
 }
 
-#minutes {
-  font-size: 1rem;
+.menu-col-right {
+  width: 50%;
+  text-align: left;
 }
 
-#seconds {
-  font-size: 1rem;
+.lodging-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  align-items: center;
+}
+
+.lodging-header {
+  position: relative;
+  width: 90%;
+  font-weight: 600;
+  font-size: 1.2rem;
+  text-decoration: underline;
+  margin-top: 1.4rem;
+  text-align: left;
+}
+
+.lodging-item-container {
+  width: 90%;
+  text-align: left;
+  z-index: 2000;
+}
+
+.lodging-item {
+  margin-bottom: 0.2rem;
+  text-decoration: none;
+}
+
+.hotel {
+  font-weight: 600;
+}
+
+.discount {
+  margin-top: 1rem;
+}
+
+.shuttle {
+  font-style: italic;
+  font-size: 0.8rem;
+}
+
+/* COUNTDOWN STYLING FROM main.js */
+#countdown-wrapper {
+  display: flex;
+  justify-content: space-evenly;
+  padding-top: 5px;
+}
+
+#countdown-column {
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+}
+
+/* BEST VIEWED IN PORTRAIT STYLING */
+
+.landscape-overlay {
+  position: absolute;
+  background-color: darkgrey;
+  justify-content: center;
+  align-items: center;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.2rem;
+  font-weight: 500;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  display: none;
+  overflow: hidden;
+}
+
+@media (orientation: landscape) and (hover: none) and (pointer: coarse) {
+  .landscape-overlay {
+    display: flex;
+  }
+  #demo {
+    display: none;
+  }
+
+  #bottom-section {
+    display: none;
+  }
+}
+
+@media only screen and (min-width: 500px) {
+  #joejoelogo {
+    width: 45%;
+  }
+}
+
+@media only screen and (min-width: 600px) {
+  #joejoelogo {
+    width: 40%;
+  }
+}
+
+@media only screen and (min-width: 700px) {
+  #website-container {
+    max-width: 60dvw;
+  }
+
+  #logos {
+    position: absolute;
+    top: 0;
+    width: 60dvw;
+  }
+
+  #joejoelogo {
+    width: 30%;
+  }
 }
