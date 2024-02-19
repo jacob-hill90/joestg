@@ -89,6 +89,7 @@ body {
 #joejoelogo {
   margin-top: 5px;
   width: 50%;
+  cursor: pointer;
 }
 
 #blockM {
@@ -96,6 +97,7 @@ body {
   width: 20%;
   left: 1rem;
   top: 1.4rem;
+  cursor: pointer;
 }
 
 #spartan {
@@ -103,6 +105,7 @@ body {
   width: 15%;
   right: 1rem;
   top: 0.8rem;
+  cursor: pointer;
 }
 
 #address {
@@ -172,6 +175,7 @@ body {
 
 .information-container-expanded {
   height: 100dvh;
+  overflow: scroll;
 }
 
 .close-info {
@@ -310,6 +314,10 @@ body {
   z-index: 1000;
   display: flex;
   align-items: center;
+}
+
+.countdown-hide {
+  display: none;
 }
 
 /* BEST VIEWED IN PORTRAIT STYLING */

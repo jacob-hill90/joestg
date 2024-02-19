@@ -65,6 +65,7 @@ document.addEventListener("DOMContentLoaded", function () {
   var closeInfo = document.getElementById("close-info");
   var infoText = document.getElementById("info-text");
   var menuLodgingContainer = document.getElementById("menu-lodging-container");
+  var countdown = document.getElementById("demo");
 
   // Add click event listener to the element that expands
   informationContainer.addEventListener("click", function () {
@@ -73,6 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     closeInfo.classList.add("close-info-displayed");
     infoText.classList.add("info-text-hidden");
     menuLodgingContainer.classList.add("menu-lodging-container-displayed");
+    countdown.classList.add("countdown-hide");
   });
 
   // Add click event listener to the close icon
@@ -85,5 +87,6 @@ document.addEventListener("DOMContentLoaded", function () {
     closeInfo.classList.remove("close-info-displayed");
     infoText.classList.remove("info-text-hidden");
     menuLodgingContainer.classList.remove("menu-lodging-container-displayed");
+    countdown.classList.remove("countdown-hide");
   });
 });
