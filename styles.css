@@ -357,8 +357,15 @@ body {
 }
 
 @media only screen and (min-width: 700px) {
-  #website-container {
-    max-width: 60dvw;
+  #list-of-events {
+    display: none;
+  }
+  #event-container {
+    justify-content: space-around;
+  }
+
+  .time-event {
+    margin-left: 10rem;
   }
 
   #logos {
@@ -369,5 +376,27 @@ body {
 
   #joejoelogo {
     width: 30%;
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #website-container {
+    width: 60dvw;
+  }
+
+  #logos {
+    position: absolute;
+    top: 0;
+    width: 60dvw;
+  }
+
+  #joejoelogo {
+    width: 30%;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .time-event {
+    margin-left: 18rem;
   }
 }
