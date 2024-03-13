@@ -20,12 +20,14 @@ body {
   width: 100dvw;
   height: 100dvh;
   z-index: -10;
+  animation: fadeinContent 1000ms;
 }
 
 .left-image,
 .right-image {
   width: 20%;
   height: 100%;
+  display: none;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -198,6 +200,7 @@ body {
   text-align: center;
   transition-duration: 800ms;
   background-color: lightgray;
+  overflow: hidden;
 }
 
 .information-container-expanded {
@@ -428,17 +431,15 @@ body {
   #joejoelogo {
     width: 30%;
   }
+
+  .left-image,
+  .right-image {
+    display: block;
+  }
 }
 
 @media only screen and (min-width: 1200px) {
   .time-event {
     margin-left: 18rem;
-  }
-}
-
-@media screen and (max-width: 1000px) {
-  .left-image,
-  .right-image {
-    display: none;
   }
 }
