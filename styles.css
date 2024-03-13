@@ -12,6 +12,33 @@ body {
   background-color: whitesmoke;
 }
 
+/* BACKGROUND IMAGES */
+.img-container {
+  position: absolute;
+  display: flex;
+  justify-content: space-between;
+  width: 100dvw;
+  height: 100dvh;
+  z-index: -10;
+}
+
+.left-image,
+.right-image {
+  width: 20%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.left-image {
+  background-image: url("./images/mich_bg.png");
+}
+
+.right-image {
+  background-image: url("./images/msu_bg.png");
+}
+
 /* START LOADING ANIMATION CSS */
 @keyframes slidedown {
   0% {
@@ -406,5 +433,12 @@ body {
 @media only screen and (min-width: 1200px) {
   .time-event {
     margin-left: 18rem;
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .left-image,
+  .right-image {
+    display: none;
   }
 }
