@@ -102,6 +102,7 @@ body {
   height: 75dvh;
   display: flex;
   flex-direction: column;
+  overflow-y: auto; /* Enable vertical scrolling */
 }
 
 #bottom-section {
@@ -151,7 +152,7 @@ body {
 
 /* START MIDDLE SECTION */
 
-#list-of-events {
+/* #list-of-events {
   text-align: center;
   font-size: 0.75rem;
   font-style: italic;
@@ -187,6 +188,44 @@ body {
   margin-left: 4.5rem;
   font-size: 0.8rem;
   opacity: 0.7;
+} */
+
+#list-of-events {
+  text-align: center;
+  font-size: 1rem; /* Increase font size for better readability */
+  font-weight: bold; /* Make it bold for emphasis */
+  margin-top: 20px; /* Add more space at the top */
+}
+
+#event-container {
+  /* width: 100%;
+  height: 95%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; */
+  width: 90%;
+  flex-grow: 1; /* Allow the event container to grow and enable scrolling */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 10px;
+}
+
+.time-event {
+  margin-left: 1rem; /* Adjust margin for consistency */
+  margin-bottom: 10px; /* Add space between each event */
+}
+
+.event-text {
+  font-size: 0.9rem; /* Adjust font size for better readability */
+}
+
+.italic-section {
+  font-style: italic;
+  font-weight: lighter; /* Lighter font weight */
+  opacity: 0.7;
+  margin-left: 4.5rem; /* Adjust margin for consistency */
+  font-size: 0.8rem; /* Adjust font size for better readability */
 }
 /* END MIDDLE SECTION */
 
