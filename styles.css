@@ -1,3 +1,4 @@
+/* CSS for mobile devices */
 * {
   margin: 0;
   border: 0;
@@ -5,13 +6,11 @@
 }
 
 body {
-  width: 100dvw;
-  height: 100dvh;
-  background: linear-gradient(
-    to bottom,
-    #ffffff,
-    #f0f0f0
-  ); /* Adjust colors as needed */
+  width: 100vw;
+  height: 100vh;
+  background: linear-gradient(to bottom, #ffffff, #f0f0f0);
+  display: flex;
+  justify-content: center;
 }
 
 .content-container {
@@ -36,10 +35,9 @@ body {
 }
 
 .bottom-container {
+  position: relative;
   display: flex;
-  flex-direction: row; /* Change to row direction */
-  justify-content: space-between; /* Distribute columns evenly */
-  align-items: stretch; /* Stretch items to fill container */
+  flex-direction: row; /* Change to column direction for mobile */
 }
 
 #logo {
@@ -72,14 +70,7 @@ body {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
 
-.timeContainer .wrapper div:first-child {
-  background: #00274c;
-  color: white;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
+.timeContainer .wrapper div:first-child,
 .timeContainer .wrapper div:nth-child(2) {
   background: #00274c;
   color: white;
@@ -88,14 +79,7 @@ body {
   flex-direction: column;
 }
 
-.timeContainer .wrapper div:nth-child(3) {
-  background: #ffcb05;
-  color: #fff;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-}
-
+.timeContainer .wrapper div:nth-child(3),
 .timeContainer .wrapper div:last-child {
   background: #ffcb05;
   color: #fff;
@@ -138,25 +122,17 @@ body {
   }
 }
 
-/* BOTTOM STUFFFF */
-
 .bottom-h3 {
   position: absolute;
   width: 100%;
-  text-align: center; /* Change position to static */
+  text-align: center;
+  top: 0;
 }
 
-/* Column styles */
 .bottom-column {
-  margin-top: 1.6rem;
-  padding: 0.2rem; /* Remove padding */
+  margin-top: 1.4rem;
 }
 
-.left {
-  margin-left: 0.2rem;
-}
-
-/* List styles */
 ul {
   list-style-type: none;
   flex-grow: 1;
@@ -183,4 +159,62 @@ ul li::before {
   width: 1em;
   position: absolute;
   left: 0; /* Align bullet to the left */
+}
+
+.left {
+  margin-left: 1rem;
+}
+
+/* CSS for tablets and larger screens */
+@media only screen and (min-width: 768px) {
+  .content-container {
+    max-width: 40vw;
+  }
+
+  #event-date {
+    font-size: 1.8rem;
+  }
+
+  .circleDiv {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg); /* Initial rotation */
+    width: 9rem;
+    height: 9rem;
+    border-radius: 50%;
+    border: 2px dashed #00a3d0;
+    animation: rotatingCircle infinite linear 100s; /* Apply rotation animation */
+  }
+
+  .bottom-container {
+    flex-direction: row; /* Change back to row direction */
+    justify-content: space-between; /* Distribute columns evenly */
+    align-items: stretch; /* Stretch items to fill container */
+    width: 80%; /* Adjust width for better layout on larger screens */
+    margin: auto; /* Center the container horizontally */
+  }
+
+  .bottom-h3 {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 0;
+    font-size: 2rem;
+  }
+
+  /* Column styles */
+  .bottom-column {
+    margin-top: 4rem;
+    padding: 0.2rem; /* Remove padding */
+    width: 45%; /* Adjust column width for better layout on larger screens */
+  }
+
+  li {
+    font-size: 1.3rem;
+  }
+
+  .left {
+    margin-left: 0.2rem;
+  }
 }
