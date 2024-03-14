@@ -179,6 +179,12 @@ li {
   position: relative; /* Relative positioning for bullet */
 }
 
+#red-heart {
+  color: red;
+  font-size: 1.2rem;
+  display: inline; /* Ensure the heart icon is displayed inline */
+}
+
 /* Additional styling for list items */
 ul li::before {
   content: "\2022";
@@ -201,6 +207,7 @@ ul li::before {
   }
 
   .middle-container {
+    padding: 1rem;
     width: 60%;
     margin: auto;
   }
