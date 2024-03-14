@@ -18,9 +18,6 @@ function countdown() {
   __hours.innerHTML = formatTime(hours);
   __minutes.innerHTML = formatTime(minutes);
   __seconds.innerHTML = formatTime(seconds);
-  // console.log(seconds)
-  // console.log(minutes)
-  // console.log(hours)
 }
 countdown();
 
@@ -29,3 +26,7 @@ function formatTime(time) {
 }
 
 setInterval(countdown, 1000);
+
+document.getElementById("logo").addEventListener("click", function () {
+  location.reload();
+});

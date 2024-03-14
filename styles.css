@@ -4,47 +4,70 @@
   padding: 0;
 }
 
-.landscape-overlay {
-  position: absolute;
-  background-color: darkgrey;
-  justify-content: center;
-  align-items: center;
-  font-family: "Montserrat", sans-serif;
-  font-size: 1.2rem;
-  font-weight: 500;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 1000;
-  display: flex;
+body {
+  width: 100dvw;
+  height: 100dvh;
+  background: linear-gradient(
+    to bottom,
+    #ffffff,
+    #f0f0f0
+  ); /* Adjust colors as needed */
+}
+
+.content-container {
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 
-/* //countdown// */
+.top-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 15vh;
+}
 
-.timeContainer {
-  z-index: 2;
-  height: 100%;
+.middle-container {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
+  height: 15vh;
+}
+
+.bottom-container {
+  display: flex;
+  flex-direction: row; /* Change to row direction */
+  justify-content: space-between; /* Distribute columns evenly */
+  align-items: stretch; /* Stretch items to fill container */
+}
+
+#logo {
+  max-width: 80%; /* Set maximum width of the logo to be 80% of viewport width */
+  max-height: 80%;
+}
+
+#event-date {
+  text-align: center;
+}
+
+.timeContainer {
+  position: absolute;
+  top: calc(50% - 2.2rem);
+  width: 90%;
 }
 
 .timeContainer .wrapper {
-  width: 800px;
-  padding: 20px;
-  max-height: 400px;
   display: flex;
   justify-content: space-around;
-  gap: 20px;
+  gap: 0.2rem;
 }
 
 .timeContainer .wrapper div {
   color: #ccc;
   text-align: center;
   width: 24%;
-  height: 130px;
+  height: 4rem;
   border-radius: 12px;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
 }
@@ -52,43 +75,112 @@
 .timeContainer .wrapper div:first-child {
   background: #00274c;
   color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .timeContainer .wrapper div:nth-child(2) {
   background: #00274c;
   color: white;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .timeContainer .wrapper div:nth-child(3) {
   background: #ffcb05;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .timeContainer .wrapper div:last-child {
   background: #ffcb05;
   color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
 }
 
 .timeContainer .wrapper div h2 {
-  font-size: 4.4rem;
+  font-size: 1.8rem;
 }
 
 .circleDiv {
   position: absolute;
-  z-index: -1;
-  top: calc(50% - 237px);
-  width: 474px;
-  height: 474px;
-  border-radius: 100%;
-  border: 6px dashed #00a3d0;
-  animation: rotatingCircle infinite linear 60s;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotate(0deg); /* Initial rotation */
+  width: 6rem;
+  height: 6rem;
+  border-radius: 50%;
+  border: 2px dashed #00a3d0;
+  animation: rotatingCircle infinite linear 100s; /* Apply rotation animation */
+}
+
+.animation {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 100%;
+  height: 100%;
+  animation: rotatingCircle infinite linear 100s;
 }
 
 @keyframes rotatingCircle {
   from {
-    transform: rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg); /* Starting position */
   }
   to {
-    transform: rotate(360deg);
+    transform: translate(-50%, -50%) rotate(360deg); /* Ending position */
   }
+}
+
+/* BOTTOM STUFFFF */
+
+.bottom-h3 {
+  position: absolute;
+  width: 100%;
+  text-align: center; /* Change position to static */
+}
+
+/* Column styles */
+.bottom-column {
+  margin-top: 1.6rem;
+  padding: 0.2rem; /* Remove padding */
+}
+
+.left {
+  margin-left: 0.2rem;
+}
+
+/* List styles */
+ul {
+  list-style-type: none;
+  flex-grow: 1;
+  margin: 0; /* Remove default margin */
+  padding: 0; /* Remove default padding */
+}
+
+li {
+  font-family: "Playfair Display", serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: rgb(35, 35, 35);
+  margin-bottom: 0.4rem; /* Increase margin for better spacing */
+  padding-left: 1rem; /* Adjust padding for bullet alignment */
+  position: relative; /* Relative positioning for bullet */
+}
+
+/* Additional styling for list items */
+ul li::before {
+  content: "\2022";
+  color: rgb(35, 35, 35);
+  font-weight: bold;
+  display: inline-block;
+  width: 1em;
+  position: absolute;
+  left: 0; /* Align bullet to the left */
 }
