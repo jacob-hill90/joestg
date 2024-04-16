@@ -30,3 +30,21 @@ setInterval(countdown, 1000);
 document.getElementById("logo").addEventListener("click", function () {
   location.reload();
 });
+
+function showSchedule() {
+  document.getElementById("default-bottom-container").style.display = "none";
+  document.getElementById("gallery-container").style.display = "none";
+  document.getElementById("schedule-container").style.display = "block";
+}
+
+function showGallery() {
+  document.getElementById("default-bottom-container").style.display = "none";
+  document.getElementById("schedule-container").style.display = "none";
+  document.getElementById("gallery-container").style.display = "block";
+}
+
+function showPreview() {
+  document.getElementById("default-bottom-container").style.display = "flex";
+  document.getElementById("schedule-container").style.display = "none";
+  document.getElementById("gallery-container").style.display = "none";
+}

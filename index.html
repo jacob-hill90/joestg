@@ -25,9 +25,6 @@
         <h4 id="event-date">October 26th, 2024</h4>
       </div>
       <div class="middle-container">
-        <div class="circleDiv">
-          <div class="animation"></div>
-        </div>
         <section class="timeContainer">
           <div class="wrapper">
             <div class="days">
@@ -48,8 +45,20 @@
             </div>
           </div>
         </section>
+        <div class="section-container">
+          <button class="preview-button" onclick="showPreview()">
+            Preview
+          </button>
+          <button class="schedule-button" onclick="showSchedule()">
+            Schedule
+          </button>
+          <button class="gallery-button" onclick="showGallery()">
+            Gallery
+          </button>
+        </div>
       </div>
-      <div class="bottom-container">
+
+      <div class="bottom-container" id="default-bottom-container">
         <h3 class="bottom-h3">Game Day Preview</h3>
         <div class="bottom-column left">
           <ul>
@@ -58,7 +67,7 @@
             <li>Photo Booth</li>
             <li>Bouncy House</li>
             <li>Skeeball</li>
-            <li>Prizes for Games</li>
+            <li>Game Time Sky Diver</li>
             <li>Cheerleaders</li>
             <li>Drum Solos</li>
             <li>T-Shirt Air Cannons</li>
@@ -87,6 +96,31 @@
             <li>Patio Heaters</li>
             <li>Excellent Sound System</li>
           </ul>
+        </div>
+      </div>
+      <div
+        class="bottom-container"
+        id="schedule-container"
+        style="display: none"
+      >
+        <div class="schedule-content">
+          <h3>Schedule</h3>
+          <p>Schedule will be released as we get closer to gameday.</p>
+        </div>
+      </div>
+      <div
+        class="bottom-container"
+        id="gallery-container"
+        style="display: none"
+      >
+        <h3 class="gallery-text">Gallery</h3>
+        <div class="image-gallery">
+          <img src="/images/1.jpg" alt="Image 1" />
+          <img src="/images/2.jpg" alt="Image 2" />
+          <img src="/images/3.jpg" alt="Image 3" />
+          <img src="/images/4.jpg" alt="Image 4" />
+          <img src="/images/5.jpg" alt="Image 5" />
+          <img src="/images/clear.png" alt="Clear" />
         </div>
       </div>
     </div>
