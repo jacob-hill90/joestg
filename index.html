@@ -22,6 +22,10 @@
     <div class="content-container">
       <div class="top-container">
         <img id="logo" src="/images/joejoelogo.png" alt="Joejoes-logo" />
+        <div class="logo-container">
+          <img id="block-m" src="/images/blockM.png" />
+          <img id="spartan" src="/images/spartan.png" />
+        </div>
         <h4 id="event-date">October 26th, 2024</h4>
       </div>
       <div class="middle-container">
@@ -50,7 +54,7 @@
             Preview
           </button>
           <button class="schedule-button" onclick="showSchedule()">
-            Information
+            Hotel
           </button>
           <button class="gallery-button" onclick="showGallery()">
             Gallery
@@ -59,41 +63,65 @@
       </div>
 
       <div class="bottom-container" id="default-bottom-container">
-        <h3 class="bottom-h3">Game Day Preview</h3>
-        <div class="bottom-column left">
-          <ul id="bulleted">
-            <li>Family Friendly</li>
-            <li>Face Painter</li>
-            <li>Photo Booth</li>
-            <li>Bouncy House</li>
-            <li>Massive Tent</li>
-            <li>Game Time Sky Diver</li>
-            <li>Cheerleaders</li>
-            <li>Drum Solos</li>
-            <li>T-Shirt Air Cannons</li>
-            <li>Incredible Food</li>
-            <li>Bar (Coffee + Alcohol)</li>
-            <li>Snap-on Raffle Throughout</li>
+        <div class="schedule-announcement">
+          <h2>Announcement</h2>
+          <p>
+            Once the game time is officially announced, the schedule will be
+            posted. Depending on when the game starts, the tailgate will start
+            at the following times:
+          </p>
+          <ul>
+            <li>
+              <span class="tailgate-time">12:00pm game</span> - 11:00am tailgate
+            </li>
+            <li>
+              <span class="tailgate-time">3:30pm game</span> - 2:00pm tailgate
+            </li>
+            <li>
+              <span class="tailgate-time">7:30pm game</span> - 5:00pm tailgate
+            </li>
           </ul>
         </div>
-        <div class="bottom-column">
-          <ul id="bulleted">
-            <li id="molly">
-              <p>
-                Flag Raising In Memory of Molly
-                <span id="red-heart">&#9829;</span>
-              </p>
-            </li>
-            <li>National Anthem</li>
-            <li>God Bless America</li>
-            <li>Ball Drops + Laser Light Show</li>
-            <li>20 Bagpipers and Drummers</li>
-            <li>25,000 Bulb Light Show</li>
-            <li>Six Enormous TV's</li>
-            <li>Big Screen Projectors</li>
-            <li>Patio Heaters</li>
-            <li>Excellent Sound System</li>
-          </ul>
+        <h3 class="bottom-h3">Game Day Preview</h3>
+
+        <div id="bottom-col-row">
+          <div class="bottom-column left">
+            <ul id="bulleted">
+              <li>Family Friendly</li>
+              <li>Face Painter</li>
+              <li>Photo Booth</li>
+              <li>Bouncy House</li>
+              <li>Massive Tent</li>
+              <li>Game Time Sky Diver</li>
+              <li>Cheerleaders</li>
+              <li>Drum Solos</li>
+              <li>T-Shirt Air Cannons</li>
+              <li>Incredible Food</li>
+              <li>Bar (Coffee + Alcohol)</li>
+              <li>Snap-on Raffle Throughout</li>
+            </ul>
+          </div>
+
+          <div class="bottom-column">
+            <ul id="bulleted">
+              <li id="molly">
+                <p>
+                  Flag Raising In Memory of Molly
+                  <span id="red-heart">&#9829;</span>
+                </p>
+              </li>
+              <li>National Anthem</li>
+              <li>God Bless America</li>
+              <li>Ball Drops + Laser Light Show</li>
+              <li>20 Bagpipers and Drummers</li>
+              <li>25,000 Bulb Light Show</li>
+              <li>Six Enormous TV's</li>
+              <li>Big Screen Projectors</li>
+              <li>Patio Heaters</li>
+              <li>Excellent Sound System</li>
+              <div id="space"></div>
+            </ul>
+          </div>
         </div>
       </div>
       <div
@@ -102,27 +130,6 @@
         style="display: none"
       >
         <div class="schedule-content">
-          <h3>Game Time and Schedule</h3>
-          <div class="schedule-announcement">
-            <h2>Announcement</h2>
-            <p>
-              Once the game time is officially announced, the schedule will be
-              posted. Depending on when the game starts, the tailgate will start
-              at the following times:
-            </p>
-            <ul>
-              <li>
-                <span class="tailgate-time">12:00pm game</span> - 11:00am
-                tailgate
-              </li>
-              <li>
-                <span class="tailgate-time">3:30pm game</span> - 2:00pm tailgate
-              </li>
-              <li>
-                <span class="tailgate-time">7:30pm game</span> - 5:00pm tailgate
-              </li>
-            </ul>
-          </div>
           <div class="collapsible-content">
             <div class="lodging-header">Lodging + Transportation</div>
             <div class="lodging-item-container">
@@ -187,3 +194,5 @@
   </body>
   <script src="main.js"></script>
 </html>
+
+<!-- 1) under preview button add in the three starts times 2)change information button to hotel button and under hotel button keep the lodging & transportation info but delete the announcement info because you moved times to preview button 3) on top of Joe Joe Tailgate header or the covers we need to find space for Michigan vs Michigan State either spell out or team logo’s -->
