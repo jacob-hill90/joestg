@@ -99,6 +99,12 @@ body {
   text-align: center;
 }
 
+#address {
+  font-size: 1rem;
+  font-weight: 600;
+  z-index: 100;
+}
+
 .timeContainer {
   position: absolute;
   top: calc(50% - 2.8rem);
@@ -207,6 +213,10 @@ li {
     font-size: 1.8rem;
   }
 
+  #address {
+    font-size: 1.3rem;
+  }
+
   .middle-container {
     padding: 1rem;
     width: 60%;
@@ -260,6 +270,10 @@ li {
     width: 40vw;
     height: 100vh;
     overflow: hidden;
+  }
+
+  #address {
+    font-size: 1.4rem;
   }
 
   #block-m {
