@@ -194,6 +194,44 @@ li {
   left: 0; /* Align bullet to the left */
 }
 
+/* SCHEDULE CSS */
+#sched-header{
+  width: 100%;
+  position: absolute;
+  text-align: center;
+}
+
+.schedule {                                                                                
+  max-width: 80dvw;  
+  margin: 50px auto;                                                                     
+  padding: 20px;                                                                         
+  background-color: #fff;                                                                
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);                                               
+  border-radius: 8px;     
+  font-size: 1rem;                                                               
+}                                                                                          
+                                                                                         
+.schedule-item {                                                                           
+  display: flex;                                                                         
+  /* justify-content: space-between;                                                         */
+  padding: .8rem 0 .8rem 0;                                                                     
+  border-bottom: 1px solid #ddd;                                                         
+}           
+                                                                                         
+.schedule-item:last-child {                                                                
+  border-bottom: none;                                                                   
+}                                                                                          
+                                                                                         
+.time {                                                                                    
+  font-weight: bold;                                                                     
+  color: #333;                                                                           
+}                                                                                          
+                                                                                         
+.event {                                                                                   
+  color: #666;   
+  padding-left: 1rem;                                                                        
+}                      
+
 .left {
   margin-left: 1rem;
 }
@@ -212,6 +250,10 @@ li {
   #event-date {
     font-size: 1.8rem;
   }
+
+  .schedule {
+    font-size: 1.2rem;                                                               
+  }   
 
   #address {
     font-size: 1.3rem;
@@ -482,40 +524,3 @@ li {
 }
 
 
-/* SCHEDULE CSS */
-#sched-header{
-  width: 100%;
-  position: absolute;
-  text-align: center;
-}
-
-.schedule {                                                                                
-  max-width: 900px;  
-  margin: 50px auto;                                                                     
-  padding: 20px;                                                                         
-  background-color: #fff;                                                                
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);                                               
-  border-radius: 8px;     
-  font-size: 1.2rem;                                                               
-}                                                                                          
-                                                                                         
-.schedule-item {                                                                           
-  display: flex;                                                                         
-  /* justify-content: space-between;                                                         */
-  padding: .8rem 0 .8rem 0;                                                                     
-  border-bottom: 1px solid #ddd;                                                         
-}                                                                                          
-                                                                                         
-.schedule-item:last-child {                                                                
-  border-bottom: none;                                                                   
-}                                                                                          
-                                                                                         
-.time {                                                                                    
-  font-weight: bold;                                                                     
-  color: #333;                                                                           
-}                                                                                          
-                                                                                         
-.event {                                                                                   
-  color: #666;   
-  padding-left: 1rem;                                                                        
-}                      
