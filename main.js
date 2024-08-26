@@ -81,3 +81,17 @@ function showGallery() {
 //   document.getElementById("schedule-container").style.display = "none";
 //   document.getElementById("gallery-container").style.display = "block";
 // }
+
+// #include <iostream>
+// using namespace std;
+
+// int add5 (int num1) {
+//   int x; 
+//   cout << X; 
+//   return x;
+// }
+
+// int main() {
+//   add5(0);
+//   return 0;
+// }
