@@ -2,7 +2,7 @@ const __days = document.querySelector("#days");
 const __hours = document.querySelector("#hours");
 const __minutes = document.querySelector("#minutes");
 const __seconds = document.querySelector("#seconds");
-const newYearEnd = "Oct 24 2024 00:00:00";
+const newYearEnd = "Oct 26 2024 12:00:00";
 
 function countdown() {
   const newYearEndDate = new Date(newYearEnd);
