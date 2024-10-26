@@ -8,11 +8,11 @@ function countdown() {
   const newYearEndDate = new Date(newYearEnd);
   const currentDate = new Date();
 
-  const totalSeconds = (newYearEndDate - currentDate) / 1000;
-  const days = Math.floor(totalSeconds / 3600 / 24);
-  const hours = Math.floor(totalSeconds / 3600) % 24;
-  const minutes = Math.floor(totalSeconds / 60) % 60;
-  const seconds = Math.floor(totalSeconds % 60);
+  // const totalSeconds = (newYearEndDate - currentDate) / 1000;
+  // const days = Math.floor(totalSeconds / 3600 / 24);
+  // const hours = Math.floor(totalSeconds / 3600) % 24;
+  // const minutes = Math.floor(totalSeconds / 60) % 60;
+  // const seconds = Math.floor(totalSeconds % 60);
 
   __days.innerHTML = 0;
   __hours.innerHTML = 0;
