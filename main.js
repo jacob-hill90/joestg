@@ -14,10 +14,10 @@ function countdown() {
   const minutes = Math.floor(totalSeconds / 60) % 60;
   const seconds = Math.floor(totalSeconds % 60);
 
-  __days.innerHTML = formatTime(days);
-  __hours.innerHTML = formatTime(hours);
-  __minutes.innerHTML = formatTime(minutes);
-  __seconds.innerHTML = formatTime(seconds);
+  __days.innerHTML = 0;
+  __hours.innerHTML = 0;
+  __minutes.innerHTML = 0;
+  __seconds.innerHTML = 0;
 }
 countdown();
 
