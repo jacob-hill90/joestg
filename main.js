@@ -1,4 +1,4 @@
-var countDownDate = new Date("Oct 21, 2023 16:30:00").getTime();
+var countDownDate = new Date("Oct 25, 2025 17:00:00").getTime();
 
 // Update the count down every 1 second
 var x = setInterval(function () {
@@ -69,7 +69,7 @@ const __days = document.querySelector("#days");
 const __hours = document.querySelector("#hours");
 const __minutes = document.querySelector("#minutes");
 const __seconds = document.querySelector("#seconds");
-const newYearEnd = "Oct 24 2024 00:00:00";
+const newYearEnd = "Oct 25 2025 17:00:00";
 
 function countdown() {
   const newYearEndDate = new Date(newYearEnd);
